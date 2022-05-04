@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <nav>
+        <a href="#" class="nav_enlace uno" > <img src="./imagenes/APLogo-20-20.png" width="80px" ></a>
+        <a href="#" class="nav_enlace dos"><img src="./imagenes/twitter.png" width="30px"></a>
+        <a href="#" class="nav_enlace tres"><img src="./imagenes/instagram.png" width="30px"></a>
+        <a href="#" class="nav_enlace cuatro"><img src="./imagenes/linkedin.png" width="30px"></a>
+        <a href="#" class="nav_enlace" id="cuatro"><img src="./imagenes/login.png" width="35px"></a>
+        <hr color="red">
+    </nav>
+    
+   <div class="foto">
+       
+    <img src="./imagenes/city.png">
+   </div>
+<!------>
+<div class="row">
+<aside>
+   <img src="./imagenes/avatar1564639344.png">
+<div class="date">
+   <p><b>Name</b></p>
+   <p>position.</p>
+</div>
+</aside>
+<section>
+    <div class="date2">
+        <p><b>about me</b></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Nostrum, eum similique quis tempore quo distinctio nemo
+             aut odio minus dolorum sequi eveniet harum.</p>
+     </div>
+</section>
+</div>
+<!---->
+
+<h3 class="titulo"><b>Work Experience</b></h3>
+
+<div class="row_row">
+    <section id="l">
+        <img src="./imagenes/jpg work.png" class="icon-working">
+        <h3 class="item">work 1 (year)</h3>
+    </section>
+    <section id="r">
+        <div class="date2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Nostrum, eum similique quis tempore quo distinctio nemo
+                 aut odio minus dolorum sequi eveniet harum. Unde facere
+                  delectus expedita accusamus nostrum dicta.</p>
+         </div>
+    </section>
+</div>
+
+<div class="row_row">
+    <section id="l">
+        <img src="./imagenes/jpg work.png" class="icon-working">
+        <h3 class="item">work 2 (year)</h3>
+    </section>
+    <section id="r">
+        <div class="date2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Nostrum, eum similique quis tempore quo distinctio nemo
+                 aut odio minus dolorum sequi eveniet harum. Unde facere
+                  delectus expedita accusamus nostrum dicta.</p>
+         </div>
+    </section>
+</div>
+
+<h3 class="titulo"><b>Education</b></h3>
+<div class="row_row">
+    <section id="l">
+        <img src="./imagenes/jpg work.png" class="icon-working">
+        <h3 class="item">Institution 1 (year)</h3>
+    </section>
+    <section id="r">
+        <div class="date2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Nostrum, eum similique quis tempore quo distinctio nemo
+                 aut odio minus dolorum sequi eveniet harum. Unde facere
+                  delectus expedita accusamus nostrum dicta.</p>
+         </div>
+    </section>
+</div>
+
+<div class="row_row">
+    <section id="l">
+        <img src="./imagenes/jpg work.png" class="icon-working">
+        <h3 class="item">Institution (year)</h3>
+    </section>
+    <section id="r">
+        <div class="date2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Nostrum, eum similique quis tempore quo distinctio nemo
+                 aut odio minus dolorum sequi eveniet harum. Unde facere
+                  delectus expedita accusamus nostrum dicta.</p>
+         </div>
+    </section>
+</div>
+<!--circulos-->
+<h3 class="titulo"><b>Hard & Soft Skills</b></h3>
+<div class="containers">
+
+    <div class="containerr">
+        <div class="circular-progress">
+          <div class="value-container">0%</div>
+        </div>
+        <p>Html</p>
+        </div>
+      <!-- progres dos -->
+      <div class="containerr">
+        <div class="circular-progress2">
+          <div class="value-container2">0%</div>
+        </div>
+        <p>Css</p>
+        </div>
+      <!-- progres tres -->
+      <div class="containerr">
+        <div class="circular-progress3">
+          <div class="value-container3">0%</div>
+        </div>
+        <p>Javascript</p>
+        </div>
+      <!-- Progres cuatro -->
+      <div class="containerr">
+        <div class="circular-progress4">
+          <div class="value-container4">0%</div>
+        </div>
+        <p>Github</p>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    /*----progres uno---*/
+  let progressBar = document.querySelector(".circular-progress");
+let valueContainer = document.querySelector(".value-container");
+
+let progressValue = 0;
+let progressEndValue = 30;/*-porcentaje---*/
+let speed = 40;
+
+let progress = setInterval(() => {
+  progressValue++;
+  valueContainer.textContent = `${progressValue}%`;
+  progressBar.style.background = `conic-gradient(
+      #fc0818 ${progressValue * 3.6}deg,
+      #cadcff ${progressValue * 3.6}deg
+  )`;
+  if (progressValue == progressEndValue) {
+    clearInterval(progress);
+  }
+}, speed);
+/*----progres dos---*/
+let progresBar = document.querySelector(".circular-progress2");
+let valueContain = document.querySelector(".value-container2");
+
+let progressValue2 = 0;
+let progressEndValue2 = 40;/*-porcentaje---*/
+let speed2 = 40;
+
+let progress2 = setInterval(() => {
+  progressValue2++;
+  valueContain.textContent = `${progressValue2}%`;
+  progresBar.style.background = `conic-gradient(
+    #fc0818 ${progressValue * 3.6}deg,
+      #cadcff ${progressValue * 3.6}deg
+  )`;
+  if (progressValue2 == progressEndValue2) {
+    clearInterval(progress2);
+  }
+}, speed2);
+/*-----progres tres-------*/
+let progres_Bar = document.querySelector(".circular-progress3");
+let value_Contain = document.querySelector(".value-container3");
+
+let progressValue3 = 0;
+let progressEndValue3 = 50;/*-porcentaje---*/
+let speed3 = 40;
+
+let progress3 = setInterval(() => {
+  progressValue3++;
+  value_Contain.textContent = `${progressValue3}%`;
+  progres_Bar.style.background = `conic-gradient(
+       #fc0818 ${progressValue * 3.6}deg,
+      #cadcff ${progressValue * 3.6}deg
+  )`;
+  if (progressValue3 == progressEndValue3) {
+    clearInterval(progress3);
+  }
+}, speed3);
+/*-----progres cuatro------*/
+let progres_b = document.querySelector(".circular-progress4");
+let value_C = document.querySelector(".value-container4");
+
+let progressValue4 = 0;
+let progressEndValue4 = 60;/*-porcentaje---*/
+let speed4 = 40;
+
+let progress4 = setInterval(() => {
+  progressValue4++;
+  value_C.textContent = `${progressValue4}%`;
+  progres_b.style.background = `conic-gradient(
+    #fc0818 ${progressValue * 3.6}deg,
+      #cadcff ${progressValue * 3.6}deg
+  )`;
+  if (progressValue4 == progressEndValue4) {
+    clearInterval(progress4);
+  }
+}, speed4);
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+<!---->
